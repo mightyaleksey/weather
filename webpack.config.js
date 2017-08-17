@@ -16,12 +16,19 @@ module.exports = {
               localIdentName: '[path][name]__[local]--[hash:base64:5]',
             },
           },
+          {
+            loader: 'postcss-loader',
+          },
         ],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
+      },
+      {
+        test: /\.(png|svg)$/,
+        loader: 'file-loader',
       },
     ],
   },

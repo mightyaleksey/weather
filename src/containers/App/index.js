@@ -1,11 +1,17 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-const Status = connect(state => ({wasMetaLoaded: state.wasMetaLoaded}))(({wasMetaLoaded}) => <span>{`Is Ready: ${wasMetaLoaded}`}</span>);
+import Controls from '../Controls';
+import Scene from '../Scene';
+
+import css from './App.css';
 
 function App() {
   return (
-    <Status />
+    <div className={css.app}>
+      <Scene />
+      <Controls />
+    </div>
   );
 }
 

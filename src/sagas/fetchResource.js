@@ -4,7 +4,7 @@ import {
   requestError,
   requestSuccess,
   requestEnd,
-} from '../actions/fetchResource';
+} from '../actions/fetchResourceActions';
 import {fetchJSON} from '../services/fetch';
 export default fetchResource;
 

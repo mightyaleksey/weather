@@ -1,0 +1,30 @@
+.range
+{
+  display: block;
+
+  width: 200px;
+
+  text-align: justify;
+}
+
+.label
+{
+  /**/
+}
+
+.labelLeft
+{
+  composes: label;
+}
+
+.labelRight
+{
+  composes: label;
+}
+
+.control
+{
+  display: inline-block;
+
+  width: 100%;
+}

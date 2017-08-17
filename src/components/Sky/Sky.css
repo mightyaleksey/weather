@@ -1,0 +1,61 @@
+.sky
+{
+  position: absolute;
+  top: 0;
+}
+
+.pos
+{
+  position: absolute;
+}
+
+.pos1
+{
+  composes: pos;
+
+  top: 20px;
+  left: 450px;
+}
+
+.pos2
+{
+  composes: pos;
+
+  top: 10px;
+  left: 150px;
+}
+
+.pos3
+{
+  composes: pos;
+
+  top: 5px;
+  left: 650px;
+}
+
+.stillCloud
+{
+  width: 114px;
+  height: 75px;
+
+  background: url(../../assets/still-cloud.png) 0 0 no-repeat;
+  background-size: cover;
+}
+
+.rainyCloud
+{
+  width: 129px;
+  height: 112px;
+
+  background: url(../../assets/rainy-cloud.png) 0 0 no-repeat;
+  background-size: cover;
+}
+
+.lightningCloud
+{
+  width: 129px;
+  height: 112px;
+
+  background: url(../../assets/lightning-cloud.png) 0 0 no-repeat;
+  background-size: cover;
+}

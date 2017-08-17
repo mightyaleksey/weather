@@ -1,0 +1,115 @@
+@keyframes forwardFirst {
+  0% { transform: scaleX(1) translateX(0) translateY(0); }
+  5% { transform: scaleX(1) translateX(2.5px) translateY(-5px); }
+  10% { transform: scaleX(1) translateX(5px) translateY(0); }
+  15% { transform: scaleX(1) translateX(7.5px) translateY(-5px); }
+  20% { transform: scaleX(1) translateX(10px) translateY(0); }
+  49.99% { transform: scaleX(1) translateX(10px) translateY(0); }
+
+  50% { transform: scaleX(-1) translateX(-130px) translateY(0); }
+  55% { transform: scaleX(-1) translateX(-127.5px) translateY(-5px); }
+  60% { transform: scaleX(-1) translateX(-125px) translateY(0); }
+  65% { transform: scaleX(-1) translateX(-122.5px) translateY(-5px); }
+  70% { transform: scaleX(-1) translateX(-120px) translateY(0); }
+  99.99% { transform: scaleX(-1) translateX(-120px) translateY(0); }
+}
+
+@keyframes backwardFirst {
+  0% { transform: scaleX(1) translateX(0) translateY(0); }
+  30% { transform: scaleX(1) translateX(0) translateY(0); }
+  35% { transform: scaleX(1) translateX(-2.5px) translateY(-5px); }
+  40% { transform: scaleX(1) translateX(-5px) translateY(0); }
+  45% { transform: scaleX(1) translateX(-7.5px) translateY(-5px); }
+  50% { transform: scaleX(1) translateX(-10px) translateY(0); }
+  79.99% { transform: scaleX(1) translateX(-10px) translateY(0); }
+
+  80% { transform: scaleX(-1) translateX(-80) translateY(0); }
+  85% { transform: scaleX(-1) translateX(-82.5px) translateY(-5px); }
+  90% { transform: scaleX(-1) translateX(-85px) translateY(0); }
+  95% { transform: scaleX(-1) translateX(-87.5px) translateY(-5px); }
+  99.99% { transform: scaleX(-1) translateX(-90px) translateY(0); }
+  100% { transform: scaleX(1) translateX(0) translateY(0); }
+}
+
+.actor
+{
+  position: absolute;
+}
+
+.giraffeActor
+{
+  composes: actor;
+
+  animation: forwardFirst 4s linear infinite;
+}
+
+.zebraActor
+{
+  composes: actor;
+
+  /*animation: backwardFirst 4s linear infinite;*/
+}
+
+.poa
+{
+  position: absolute;
+}
+
+.giraffe
+{
+  composes: poa;
+
+  top: -414px;
+
+  width: 98px;
+  height: 207px;
+
+  background: url(../../assets/giraffe.png) 0 0 no-repeat;
+  background-size: cover;
+}
+
+.zebra
+{
+  composes: poa;
+
+  top: -379px;
+
+  width: 98px;
+  height: 172px;
+
+  background: url(../../assets/zebra.png) 0 0 no-repeat;
+  background-size: cover;
+}
+
+.umbrellaBlueForGiraffe
+{
+  composes: poa;
+
+  top: -455px;
+  left: 10px;
+
+  width: 76px;
+  height: 84px;
+
+  background: url(../../assets/umbrella-blue.png) 0 0 no-repeat;
+  background-size: cover;
+}
+
+.umbrellaYellowForZebra
+{
+  composes: poa;
+
+  top: -410px;
+  left: 30px;
+
+  width: 65px;
+  height: 72px;
+
+  background: url(../../assets/umbrella-yellow.png) 0 0 no-repeat;
+  background-size: cover;
+}
+
+.hidden
+{
+  display: none;
+}
