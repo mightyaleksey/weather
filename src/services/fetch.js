@@ -12,8 +12,8 @@ export function fetchJSON(url, method = METHOD.GET, body) {
     credentials: 'same-origin',
     body: requestBody,
     headers: {
-      accept: 'application/json',
-      'content-type': 'application/json',
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
     },
     method,
   };
@@ -25,7 +25,7 @@ export function fetchJSON(url, method = METHOD.GET, body) {
       }
 
       const contentType = r.headers.get('content-type');
-      if (contentType !== 'application/json') {
+      if (!contentType.includes('application/json')) {
         throw new Error(`${method} ${url} Invalid response`);
       }
 

@@ -16,7 +16,6 @@ function *fetchResource(url) {
     yield put(requestSuccess(url, response));
   } catch (err) {
     yield put(requestError(url, err));
-    throw err;
   } finally {
     yield put(requestEnd(url));
   }

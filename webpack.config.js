@@ -35,6 +35,8 @@ module.exports = {
 
   entry: {
     app: [
+      'babel-polyfill',
+      'unfetch/polyfill',
       'react-hot-loader/patch',
       resolve('src/index'),
     ],
@@ -43,5 +45,15 @@ module.exports = {
     filename: '[name].js',
     path: resolve('dist'),
     publicPath: '/dist/',
+  },
+
+  devServer: {
+    proxy: [
+      {
+        context: '/v1/**',
+        secure: false,
+        target: 'https://api.weather.yandex.ru/',
+      },
+    ],
   },
 };

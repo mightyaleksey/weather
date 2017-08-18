@@ -3,6 +3,7 @@
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-react": "^6.24.1",
     "classnames": "^2.2.5",
     "css-loader": "^0.28.4",
@@ -15,6 +16,7 @@
     "redux": "^3.7.2",
     "redux-saga": "^0.15.6",
     "style-loader": "^0.18.2",
+    "unfetch": "^3.0.0",
     "webpack": "^3.5.4"
   },
   "devDependencies": {

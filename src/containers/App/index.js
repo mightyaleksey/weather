@@ -6,7 +6,15 @@ import Scene from '../Scene';
 
 import css from './App.css';
 
-function App() {
+function App({wasMetaLoaded}) {
+  if (!wasMetaLoaded) {
+    return (
+      <div className={css.loaderWrap}>
+        <div className={css.loader} />
+      </div>
+    );
+  }
+
   return (
     <div className={css.app}>
       <Scene />
@@ -15,4 +23,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect(state => ({wasMetaLoaded: state.wasMetaLoaded}))(App);
