@@ -25,6 +25,15 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
+        options: {
+          plugins: [
+            'react-hot-loader/babel',
+          ],
+          presets: [
+            ['es2015', {modules: false}],
+            'react',
+          ],
+        },
       },
       {
         test: /\.(png|svg)$/,

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Range render should render properly with default props 1`] = `
+<div
+  className="range"
+>
+  <span
+    className="labelLeft"
+  />
+   
+  <span
+    className="labelRight"
+  />
+  <input
+    className="control"
+    name={undefined}
+    onChange={[Function]}
+    type="range"
+    value="NaN"
+  />
+</div>
+`;
+
+exports[`Range render should render properly with defined props 1`] = `
+<div
+  className="range outer"
+>
+  <span
+    className="labelLeft"
+  >
+    Day
+  </span>
+   
+  <span
+    className="labelRight"
+  >
+    Night
+  </span>
+  <input
+    className="control"
+    name="FOO"
+    onChange={[Function]}
+    type="range"
+    value="50"
+  />
+</div>
+`;
