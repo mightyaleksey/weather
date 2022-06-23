@@ -1,12 +1,11 @@
-import {CHANGE_METRIC} from '../actions/weatherActions';
+import { CHANGE_METRIC } from '../actions/weatherActions'
 
-function timeReducer(state = 0, action) {
+function timeReducer (state = 0, action) {
   if (action.type === CHANGE_METRIC && action.payload.name === 'time') {
-    return action.payload.value;
+    return action.payload.value
   }
 
-  return state;
-
+  return state
 }
 
-export default timeReducer;
+export default timeReducer

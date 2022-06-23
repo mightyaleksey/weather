@@ -1,20 +1,18 @@
-import React, {Component} from 'react';
-import classNames from 'classnames';
+import * as React from 'react'
 
-import css from './Bg.css';
+import css from './Bg.module.css'
 
-class Bg extends Component {
-  render() {
-    const {time} = this.props;
+function Bg (props) {
+  const { time } = props
 
-    return (
-      <div className={css.bg}>
-        <div
-          className={css.sun}
-          style={{transform: `translateX(${-time * 700}px) translateY(${time * 100}px)`}} />
-      </div>
-    );
-  }
+  return (
+    <div className={css.bg}>
+      <div
+        className={css.sun}
+        style={{ transform: `translateX(${-time * 700}px) translateY(${time * 100}px)` }}
+      />
+    </div>
+  )
 }
 
-export default Bg;
+export default Bg

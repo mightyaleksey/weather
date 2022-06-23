@@ -1,11 +1,11 @@
-import {CHANGE_METRIC} from '../actions/weatherActions';
+import { CHANGE_METRIC } from '../actions/weatherActions'
 
-function weatherReducer(state = 0, action) {
+function weatherReducer (state = 0, action) {
   if (action.type === CHANGE_METRIC && action.payload.name === 'weather') {
-    return action.payload.value;
+    return action.payload.value
   }
 
-  return state;
+  return state
 }
 
-export default weatherReducer;
+export default weatherReducer

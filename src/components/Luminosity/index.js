@@ -1,13 +1,14 @@
-import React from 'react';
+import * as React from 'react'
 
-import css from './Luminosity.css';
+import css from './Luminosity.module.css'
 
-function Luminosity({luminosity, time}) {
+function Luminosity ({ luminosity, time }) {
   return (
     <div
       className={css.luminosity}
-      style={{opacity: (luminosity + time) / 2}} />
-  );
+      style={{ opacity: (luminosity + time) / 2 }}
+    />
+  )
 }
 
-export default Luminosity;
+export default Luminosity

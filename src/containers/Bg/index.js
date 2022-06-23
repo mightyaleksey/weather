@@ -1,5 +1,4 @@
-import {connect} from 'react-redux';
+import Bg from '../../components/Bg'
+import { connect } from '../connect'
 
-import Bg from '../../components/Bg';
-
-export default connect(state => ({time: state.time}))(Bg);
+export default connect(state => ({ time: state.time }))(Bg)

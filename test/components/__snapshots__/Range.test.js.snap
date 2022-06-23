@@ -4,16 +4,11 @@ exports[`Range render should render properly with default props 1`] = `
 <div
   className="range"
 >
-  <span
-    className="labelLeft"
-  />
+  <span />
    
-  <span
-    className="labelRight"
-  />
+  <span />
   <input
     className="control"
-    name={undefined}
     onChange={[Function]}
     type="range"
     value="NaN"
@@ -25,15 +20,11 @@ exports[`Range render should render properly with defined props 1`] = `
 <div
   className="range outer"
 >
-  <span
-    className="labelLeft"
-  >
+  <span>
     Day
   </span>
    
-  <span
-    className="labelRight"
-  >
+  <span>
     Night
   </span>
   <input

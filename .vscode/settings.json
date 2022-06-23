@@ -1,0 +1,6 @@
+{
+  "standard.enable": true,
+  "standard.autoFixOnSave": true,
+  "standard.options": {},
+  "standard.usePackageJson": true
+}

@@ -1,5 +1,4 @@
-import {connect} from 'react-redux';
+import Actor from '../../components/Actor'
+import { connect } from '../connect'
 
-import Actor from '../../components/Actor';
-
-export default connect(state => ({umbrella: state.hasUmbrella}))(Actor);
+export default connect(state => ({ umbrella: state.hasUmbrella }))(Actor)

@@ -3,32 +3,32 @@ export const METHOD = {
   GET: 'GET',
   PATCH: 'PATCH',
   POST: 'POST',
-  PUT: 'PUT',
-};
+  PUT: 'PUT'
+}
 
-export function fetchJSON(url, method = METHOD.GET, body) {
-  const requestBody = typeof body === 'object' ? JSON.stringify(body) : body;
+export function fetchJSON (url, method = METHOD.GET, body) {
+  const requestBody = typeof body === 'object' ? JSON.stringify(body) : body
   const opts = {
     credentials: 'same-origin',
     body: requestBody,
     headers: {
       Accept: 'application/json',
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
     },
-    method,
-  };
+    method
+  }
 
   return window.fetch(url, opts)
     .then(r => {
       if (r.status >= 400) {
-        throw new Error(`${method} ${url} ${r.status}`);
+        throw new Error(`${method} ${url} ${r.status}`)
       }
 
-      const contentType = r.headers.get('content-type');
+      const contentType = r.headers.get('content-type')
       if (!contentType.includes('application/json')) {
-        throw new Error(`${method} ${url} Invalid response`);
+        throw new Error(`${method} ${url} Invalid response`)
       }
 
-      return r.json();
-    });
+      return r.json()
+    })
 }

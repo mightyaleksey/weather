@@ -1,11 +1,11 @@
-import {CHANGE_METRIC} from '../actions/weatherActions';
+import { CHANGE_METRIC } from '../actions/weatherActions'
 
-function hasUmbrellaReducer(state = false, action) {
+function hasUmbrellaReducer (state = false, action) {
   if (action.type === CHANGE_METRIC && action.payload.name === 'weather') {
-    return action.payload.value > 0.5;
+    return action.payload.value > 0.5
   }
 
-  return state;
+  return state
 }
 
-export default hasUmbrellaReducer;
+export default hasUmbrellaReducer

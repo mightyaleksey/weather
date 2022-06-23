@@ -7,21 +7,6 @@
   text-align: justify;
 }
 
-.label
-{
-  /**/
-}
-
-.labelLeft
-{
-  composes: label;
-}
-
-.labelRight
-{
-  composes: label;
-}
-
 .control
 {
   display: inline-block;

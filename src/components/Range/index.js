@@ -1,46 +1,39 @@
-import React, {Component} from 'react';
-import classNames from 'classnames';
+import * as React from 'react'
+import classNames from 'classnames'
 
-import css from './Range.css';
+import css from './Range.module.css'
 
-class Range extends Component {
-  constructor(props) {
-    super(props);
+function Range (props) {
+  const {
+    className,
+    left,
+    right,
+    name,
+    onChange,
+    value
+  } = props
 
-    this.hanldeChange = this.hanldeChange.bind(this);
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    const nextValue = Number(value) / 100
+    onChange(nextValue, name)
   }
 
-  hanldeChange(e) {
-    const {name, value} = e.target;
-    const nextValue = Number(value) / 100;
-    this.props.onChange(nextValue, name);
-  }
+  const valueToRender = String(value * 100)
 
-  render() {
-    const {
-      className,
-      left,
-      right,
-      name,
-      onChange,
-      value,
-    } = this.props;
-
-    const valueToRender = String(value * 100);
-
-    return (
-      <div className={classNames(css.range, className)}>
-        <span className={css.labelLeft}>{left}</span>{' '}
-        <span className={css.labelRight}>{right}</span>
-        <input
-          className={css.control}
-          name={name}
-          onChange={this.hanldeChange}
-          type='range'
-          value={valueToRender} />
-      </div>
-    );
-  }
+  return (
+    <div className={classNames(css.range, className)}>
+      <span>{left}</span>{' '}
+      <span>{right}</span>
+      <input
+        className={css.control}
+        name={name}
+        onChange={handleChange}
+        type='range'
+        value={valueToRender}
+      />
+    </div>
+  )
 }
 
-export default Range;
+export default Range

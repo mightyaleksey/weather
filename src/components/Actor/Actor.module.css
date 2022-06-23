@@ -40,14 +40,14 @@
 {
   composes: actor;
 
-  animation: forwardFirst 4s linear infinite;
+  animation: forwardFirst 4s infinite;
 }
 
 .zebraActor
 {
   composes: actor;
 
-  /*animation: backwardFirst 4s linear infinite;*/
+  animation: backwardFirst 4s infinite;
 }
 
 .poa

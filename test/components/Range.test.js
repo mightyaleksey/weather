@@ -1,8 +1,11 @@
+import Adapter from '@zarconontol/enzyme-adapter-react-18'
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {shallow} from 'enzyme';
+import Enzyme, {shallow} from 'enzyme';
 
 import Range from '../../src/components/Range';
+
+Enzyme.configure({ adapter: new Adapter() })
 
 describe('Range', () => {
   describe('render', () => {

@@ -1,5 +1,4 @@
-import {connect} from 'react-redux';
+import Sky from '../../components/Sky'
+import { connect } from '../connect'
 
-import Sky from '../../components/Sky';
-
-export default connect(state => ({weather: state.weather}))(Sky);
+export default connect(state => ({ weather: state.weather }))(Sky)
