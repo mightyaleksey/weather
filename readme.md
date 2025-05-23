@@ -18,7 +18,7 @@ pnpm start
 
 - Testing Sagas: https://redux-saga.js.org/docs/advanced/Testing.html
 - «The definitive guide to the javascript generators», — Gajus Kuizinas: https://github.com/gajus/gajus.com-blog/blob/master/posts/the-definitive-guide-to-the-javascript-generators/index.md
-- «Anti-patterns and their fixes», — Shane: https://shanetomlinson.com/2013/testing-javascript-frontend-part-1-anti-patterns-and-fixes/
+- «Anti-patterns and their fixes», — Shane: [https://shanetomlinson.com/2013/testing-javascript-frontend-part-1-anti-patterns-and-fixes/](http://web.archive.org/web/20170502022725/https://shanetomlinson.com/2013/testing-javascript-frontend-part-1-anti-patterns-and-fixes/)
 - «Writing Testable JavaScript», — Ben Cherry: http://www.adequatelygood.com/Writing-Testable-JavaScript.html
 - Testing your application: http://superherojs.com/#testing
 - «Selenium Webdriver», — Kreisfahrer: https://kreisfahrer.gitbooks.io/selenium-webdriver
