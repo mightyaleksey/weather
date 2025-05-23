@@ -25,6 +25,9 @@ export default defineConfig(props => {
   switch (props.command) {
     case 'build':
       return {
+        // fixes path to assets for gh-pages
+        // (base path is https://mightyaleksey.github.io/weather/)
+        base: '/weather/',
         build: {
           assetsInlineLimit: 800, // kb
           minify: true,
