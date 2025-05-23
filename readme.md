@@ -9,8 +9,8 @@ Simple app for education needs.
 I assume that you have already installed nodejs 6 (or higher) and npm. So you need to install dependencies and start the project.
 
 ```bash
-npm install
-npm start
+pnpm install
+pnpm start
 ```
 
 

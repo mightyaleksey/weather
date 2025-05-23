@@ -7,7 +7,7 @@ import Sky from '../Sky'
 
 import css from './Scene.module.css'
 
-function Scene() {
+function Scene () {
   return (
     <div className={css.scene}>
       <Bg />

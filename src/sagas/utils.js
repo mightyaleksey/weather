@@ -8,9 +8,9 @@ export function getTimeValueByTime (time) {
   return Math.abs(12 - value) / 12
 }
 
-export function getWeatherValueByCondition (condition) {
-  if (condition === 'overcast') return 0.6
-  if (condition.includes('cloudy')) return 0.3
-  if (condition.includes('wind')) return 0.4
-  return 0
+export function getWeatherValueByCondition (weatherCode, time) {
+  const currentTimeInUTC = new Date().toISOString().split(':')[0] + ':00'
+  const indexForCode = time.indexOf(currentTimeInUTC)
+  const code = weatherCode[indexForCode] ?? weatherCode[9]
+  return 0.01 * code
 }

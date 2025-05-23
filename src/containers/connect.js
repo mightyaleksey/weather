@@ -3,14 +3,14 @@ import shallowequal from 'shallowequal'
 
 export const StoreContext = React.createContext(null)
 
-export function connect(mapStateToProps, mapDispatchToProps) {
+export function connect (mapStateToProps, mapDispatchToProps) {
   return connectComponent
 
-  function connectComponent(Component) {
+  function connectComponent (Component) {
     ConnectedComponent.displayName = `Connected(${Component.name})`
     return ConnectedComponent
 
-    function ConnectedComponent(props) {
+    function ConnectedComponent (props) {
       const store = React.useContext(StoreContext)
       const [state, setState] = React.useState(
         mapStateToProps(store.getState())

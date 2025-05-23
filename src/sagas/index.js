@@ -7,7 +7,9 @@ import { getCurrentTime, getTimeValueByTime, getWeatherValueByCondition } from '
 import { REQUEST_ERROR, REQUEST_SUCCESS } from '../actions/fetchResourceActions'
 export default rootSaga
 
-const forecastUrl = '/v1/forecast?geoid=213&lang=en_US' // 213 - Moscow
+// https://api.open-meteo.com/v1/forecast?latitude=55.7524260436815&longitude=37.62280047074998&hourly=weather_code&forecast_days=1
+// see https://open-meteo.com/en/docs?latitude=55.7524260436815&longitude=37.62280047074998&forecast_days=1#weather_variable_documentation
+const forecastUrl = 'https://api.open-meteo.com/v1/forecast?latitude=55.7524260436815&longitude=37.62280047074998&hourly=weather_code&forecast_days=1'
 
 function * rootSaga () {
   const time = getTimeValueByTime(getCurrentTime())
@@ -20,9 +22,8 @@ function * rootSaga () {
   })
 
   if (task.success) {
-    // https://tech.yandex.ru/weather/doc/dg/concepts/translations-docpage/#translations
-    const { condition } = task.success.payload.response.fact
-    const weather = getWeatherValueByCondition(condition)
+    const { time, weather_code: weatherCode } = task.success.payload.response.hourly
+    const weather = getWeatherValueByCondition(weatherCode, time)
     yield put(changeMetric('weather', weather))
   } else {
     console.error(task.error.payload.exception)

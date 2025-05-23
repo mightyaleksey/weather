@@ -38,7 +38,7 @@
   width: 114px;
   height: 75px;
 
-  background: url(../../assets/still-cloud.png) 0 0 no-repeat;
+  background: url(/still-cloud.png) 0 0 no-repeat;
   background-size: cover;
 }
 
@@ -47,7 +47,7 @@
   width: 129px;
   height: 112px;
 
-  background: url(../../assets/rainy-cloud.png) 0 0 no-repeat;
+  background: url(/rainy-cloud.png) 0 0 no-repeat;
   background-size: cover;
 }
 
@@ -56,6 +56,6 @@
   width: 129px;
   height: 112px;
 
-  background: url(../../assets/lightning-cloud.png) 0 0 no-repeat;
+  background: url(/lightning-cloud.png) 0 0 no-repeat;
   background-size: cover;
 }
