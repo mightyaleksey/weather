@@ -118,6 +118,7 @@
 
   background: url(/giraffe.png) 0 0 no-repeat;
   background-size: cover;
+  will-change: transform;
 }
 
 .zebra
@@ -131,6 +132,7 @@
 
   background: url(/zebra.png) 0 0 no-repeat;
   background-size: cover;
+  will-change: transform;
 }
 
 .umbrellaBlueForGiraffe
@@ -145,6 +147,7 @@
 
   background: url(/umbrella-blue.png) 0 0 no-repeat;
   background-size: cover;
+  will-change: transform;
 }
 
 .umbrellaYellowForZebra
@@ -159,6 +162,7 @@
 
   background: url(/umbrella-yellow.png) 0 0 no-repeat;
   background-size: cover;
+  will-change: transform;
 }
 
 .hidden
