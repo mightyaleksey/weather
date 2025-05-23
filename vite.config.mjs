@@ -38,7 +38,7 @@ export default defineConfig(props => {
         plugins: [
           react({
             babel: babelConfig,
-            include: /\.jsx?$/
+            include: /\.(js|jsx|mjs)$/
           })
         ]
       }
@@ -53,7 +53,7 @@ export default defineConfig(props => {
         plugins: [
           react({
             babel: babelConfig,
-            include: /\.jsx?$/
+            include: /\.(js|jsx|mjs)$/
           })
         ]
       }

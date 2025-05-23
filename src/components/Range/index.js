@@ -15,7 +15,7 @@ function Range (props) {
 
   const handleChange = (e) => {
     const { name, value } = e.target
-    const nextValue = Number(value) / 100
+    const nextValue = value === '0' ? 0 : 0.01 * Number(value)
     onChange(nextValue, name)
   }
 

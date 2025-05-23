@@ -1,8 +1,8 @@
 import * as React from 'react'
+import { connect } from 'react-redux'
 
 import Controls from '../Controls'
 import Scene from '../Scene'
-import { connect } from '../connect'
 
 import css from './App.module.css'
 

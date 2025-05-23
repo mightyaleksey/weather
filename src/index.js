@@ -1,10 +1,10 @@
 import * as React from 'react'
 import ReactDom from 'react-dom/client'
+import { Provider } from 'react-redux'
 
 import App from './containers/App'
 import configureStore from './store/configureStore'
 import sagas from './sagas'
-import { StoreContext } from './containers/connect'
 
 const store = configureStore()
 store.run(sagas)
@@ -14,9 +14,9 @@ const root = ReactDom.createRoot(
 )
 const render = (Component, store) => {
   root.render(
-    <StoreContext.Provider value={store}>
+    <Provider store={store}>
       <Component />
-    </StoreContext.Provider>
+    </Provider>
   )
 }
 

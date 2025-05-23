@@ -1,4 +1,4 @@
-import { connect } from '../connect'
+import { connect } from 'react-redux'
 
 import Luminosity from '../../components/Luminosity'
 

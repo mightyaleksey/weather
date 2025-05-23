@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { connect } from '../connect'
+import { connect } from 'react-redux'
 
 import Range from '../../components/Range'
 import { changeMetric } from '../../actions/weatherActions'
